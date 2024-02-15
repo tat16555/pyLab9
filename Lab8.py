@@ -4,15 +4,15 @@ class Mall:
         self.product_price = int(input("Price of all products you purchase (THB): "))
 
     def calculate_discount(self):
-        if self.product_price < 3000:
-            self.dis = self.product_price * 20 / 100
-            self.dis_per = 20
-        elif self.product_price < 8000:
-            self.dis = self.product_price * 30 / 100
-            self.dis_per = 30
-        elif self.product_price < 15000:
+        if self.product_price > 15000 :
             self.dis = self.product_price * 40 / 100
             self.dis_per = 40
+        elif self.product_price > 8001:
+            self.dis = self.product_price * 30 / 100
+            self.dis_per = 30
+        elif self.product_price > 3000 :
+            self.dis = self.product_price * 20 / 100
+            self.dis_per = 20
         else:
             self.dis = self.product_price * 10 / 100
             self.dis_per = 10
